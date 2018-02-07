@@ -71,6 +71,7 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     private Marker droneMarker = null;
 
     private float altitude = 100.0f;
+    private float altitude1 = 50.0f;
     private float mSpeed = 10.0f;
 
     private List<Waypoint> waypointList = new ArrayList<>();
@@ -282,13 +283,17 @@ public class MainActivity extends FragmentActivity implements View.OnClickListen
     public void onMapClick(LatLng point) {
         if (isAdd == true){
             markWaypoint(point);
-            Waypoint mWaypoint = new Waypoint(point.latitude, point.longitude, altitude);
+            //Waypoint mWaypoint = new Waypoint(point.latitude, point.longitude, altitude);
             //Add Waypoints to Waypoint arraylist;
             if (waypointMissionBuilder != null) {
+
+                Waypoint mWaypoint = new Waypoint(point.latitude, point.longitude, altitude);
+
                 waypointList.add(mWaypoint);
                 waypointMissionBuilder.waypointList(waypointList).waypointCount(waypointList.size());
             }else
             {
+                Waypoint mWaypoint = new Waypoint(point.latitude, point.longitude, altitude1);
                 waypointMissionBuilder = new WaypointMission.Builder();
                 waypointList.add(mWaypoint);
                 waypointMissionBuilder.waypointList(waypointList).waypointCount(waypointList.size());

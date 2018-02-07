@@ -3,7 +3,9 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/GSDemo.iml" filepath="$PROJECT_DIR$/GSDemo.iml" />
+      <module fileurl="file://F:\drone\GSDemo\GSDemo.iml" filepath="F:\drone\GSDemo\GSDemo.iml" />
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
+      <module fileurl="file://F:\drone\GSDemo\app\app.iml" filepath="F:\drone\GSDemo\app\app.iml" />
     </modules>
   </component>
 </project>
